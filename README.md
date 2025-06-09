@@ -41,7 +41,7 @@ export PATH=$CUDA_HOME/bin:$PATH
 
 ## 🚀 Quick Start
 
-## Unlearning with MSA
+### Unlearning with MSA
 
 The MSA approach performs unlearning on a target model $\theta_\mathcal{D}$ that has been trained on the entire corpus, including the forget documents $\mathcal{D}_f$ that are subject to removal—for example, a model trained on the full TOFU[^1] or RESTOR[^2] dataset.
 
@@ -66,7 +66,7 @@ To support this process, the repository provides two key functions:
 [^1]: Maini, Pratyush, et al. *"Tofu: A task of fictitious unlearning for LLMs."* arXiv preprint [arXiv:2401.06121](https://arxiv.org/abs/2401.06121), 2024.  
 [^2]: Rezaei, Keivan, et al. *"RESTOR: Knowledge Recovery through Machine Unlearning."* arXiv preprint [arXiv:2411.00204](https://arxiv.org/abs/2411.00204), 2024.
 
-### 1. Finetuning
+#### 1. Finetuning
 
 Code in [`src/finetune.py`](src/finetune.py) supports finetuning a model on a given dataset  
 (e.g., `TOFU_QA_forget01`, `TOFU_QA_retain99_ft`, or `TOFU_QA_full`).
@@ -83,7 +83,7 @@ See [`scripts/finetune.sh`](scripts/finetune.sh) for example usage.
 
 ---
 
-### 2. Unlearning with MSA
+#### 2. Unlearning with MSA
 
 Code in [`src/tv_unlearn.py`](src/tv_unlearn.py) supports computing the unlearned model using MSA.  
 It requires the following arguments:
