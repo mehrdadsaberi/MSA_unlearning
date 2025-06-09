@@ -43,13 +43,13 @@ export PATH=$CUDA_HOME/bin:$PATH
 
 ## Unlearning with MSA
 
-The MSA approach performs unlearning on a target model $\theta_\mathcal{D}$ that has been trained on the full dataset, including the forget documents $\mathcal{D}_f$—for instance, a model trained on the full TOFU[^1] or RESTOR[^2] dataset.
+The MSA approach performs unlearning on a target model $\theta_\mathcal{D}$ that has been trained on the entire corpus, including the forget documents $\mathcal{D}_f$ that are subject to removal—for example, a model trained on the full TOFU[^1] or RESTOR[^2] dataset.
 
-To begin, an earlier checkpoint $\theta_0$, taken prior to the model's exposure to the forget documents, is used to compute forget and retain vectors. Specifically, $\theta_0$ is finetuned on the forget set $\mathcal{D}_f$ to produce $\theta_1$, and the forget vector is defined as:
-
+To apply unlearning, we leverage an earlier model checkpoint $\theta_0$, obtained before the model is exposed to the forget documents. This checkpoint is used to compute forget and retain vectors, which are subsequently used to adjust the target model.
+Specifically, $\theta_0$ is finetuned on the forget set $\mathcal{D}_f$ to produce $\theta_1$, and the forget vector is defined as:
 $$\vec{\theta}_f = \theta_1 - \theta_0.$$
 
-This vector is later used to adjust the target model. If a retain set $\mathcal{D}_r$ is available, a retain vector is computed similarly: $\theta_0$ is finetuned on $\mathcal{D}_r$ to yield $\theta_2$, and the retain vector is:
+ If a retain set $\mathcal{D}_r$ is available, a retain vector is computed similarly: $\theta_0$ is finetuned on $\mathcal{D}_r$ to yield $\theta_2$, and the retain vector is:
 
 $$\vec{\theta}_r = \theta_2 - \theta_0.$$
 
@@ -97,7 +97,7 @@ It requires the following arguments:
 - `local_corrupted_model_path`: Path to the model $\theta_\mathcal{D}$
 - `alpha`: Scalar for forget direction $\vec{\theta}_f$
 - `beta`: Scalar for retain direction $\vec{\theta}_r$  
-  *(If $\beta = 0$, retain model arguments can be omitted)*
+  (If $\beta = 0$, retain model arguments can be omitted)
 - `save_path`: Path where the unlearned model parameters will be saved
 
 See [`scripts/tv_unlearn.sh`](scripts/tv_unlearn.sh) for example usage.
