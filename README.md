@@ -4,7 +4,7 @@
 
 <!-- Add your method’s cover image here -->
 
-![MSA Cover Image](assets/MSA.png)
+![MSA Cover Image](./assets/MSA.png)
 
 This repository contains the official implementation of **Model State Arithmetic (MSA)**, introduced in the paper:
 
