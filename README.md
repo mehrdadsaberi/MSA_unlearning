@@ -58,8 +58,8 @@ Finally, the parameters of the unlearned model are computed by modifying the tar
 $$\theta_{\text{unlearn}} = \theta_{\mathcal{D}} - \alpha \vec{\theta}_f + \beta \vec{\theta}_r.$$
 
 To support this process, the repository provides two key functions:  
-(1) finetuning, and  
-(2) applying MSA to compute the unlearned model.
+1. finetuning;
+2. applying MSA to compute the unlearned model.
 
 ---
 
