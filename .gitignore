@@ -1,0 +1,46 @@
+# Ignore the outputs folder
+outputs/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Virtual environments
+env/
+venv/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Logs and databases
+*.log
+*.sqlite3
+
+# IDE and editor folders
+.vscode/
+.idea/
+
+# macOS metadata
+.DS_Store
+
+# Sphinx documentation build
+docs/_build/
+
+# Coverage reports
+htmlcov/
+.coverage
+
+# pip cache
+pip-log.txt
+pip-delete-this-directory.txt
