@@ -1,6 +1,6 @@
 # Model State Arithmetic for Machine Unlearning
 
-[![arXiv](https://img.shields.io/badge/arXiv-TODO-b31b1b.svg)](TODO)
+[![arXiv](https://img.shields.io/badge/arXiv-TODO-b31b1b.svg)](https://arxiv.org/abs/2506.20941)
 
 <!-- Add your method’s cover image here -->
 
@@ -110,5 +110,10 @@ The code in this repo is inspired by [Open-Unlearning](https://github.com/locusl
 If you find our work useful, please consider citing us via:
 
 ```bibtex
-
+@article{rezaei2025model,
+  title={Model State Arithmetic for Machine Unlearning},
+  author={Rezaei, Keivan and Saberi, Mehrdad and Ravichander, Abhilasha and Feizi, Soheil},
+  journal={arXiv preprint arXiv:2506.20941},
+  year={2025}
+}
 ```
