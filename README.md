@@ -1,6 +1,6 @@
 # Model State Arithmetic for Machine Unlearning
 
-[![arXiv](https://img.shields.io/badge/arXiv-TODO-b31b1b.svg)](https://arxiv.org/abs/2506.20941)
+[![preprint](https://img.shields.io/static/v1?label=arXiv&message=2506.20941&color=B31B1B)](https://arxiv.org/pdf/2506.20941)
 
 <!-- Add your method’s cover image here -->
 
